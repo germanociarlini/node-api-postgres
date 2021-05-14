@@ -1,10 +1,10 @@
-const express = require('express');
-const cors = require('cors');
-const routes = require('./routes');
+import express from 'express';
+import cors from 'cors';
+import routes from './routes';
+import '../database'
+
 const app = express();
 const port = 3001;
-
-process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 
 app.use(express.json());
 app.use(

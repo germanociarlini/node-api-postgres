@@ -1,7 +1,8 @@
-const { Router } = require('express');
-const { create } = require('./app/controllers/GeolocationController');
+import Router from 'express';
+import GeolocationController from './app/controllers/GeolocationController';
 const routes = Router();
 
-routes.post("/geolocation", create)
+routes.post("/geolocation", GeolocationController.create)
+routes.get("/geolocation", GeolocationController.index)
 
 module.exports = routes
